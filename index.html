@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="./resources/images/hamburguer.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+        <title>DrivenEats</title>
+    </head>
+    <body>
+        <!-- CARD COM OS PEDIDOS -->
+        <div class="back none">
+            <div class="card">
+                <h1>Confirme seu pedido</h1>
+                <div class="box-text">
+                    <div class="left-side">
+                        <p>Prato</p>
+                        <p>Prato</p>
+                        <p>Prato</p>
+                        <p>Total</p>
+                    </div>
+                    <div class="right-side">
+                        <p>Valor</p>
+                        <p>Valor</p>
+                        <p>Valor</p>
+                        <p>Valor</p>
+                    </div>
+                </div>
+                <div id="closeOrder" onclick="fechaPedido()">Tudo certo, pode pedir</div>
+                <div id="cancel" onclick="fechaCard()">Cancelar</div>
+            </div>
+        </div>
+        <!-- CABEÇALHO -->
+        <header>
+            <div>
+                <h1>DrivenEats</h1>
+                <p>Sua comida em 6 minutos</p>
+            </div>
+        </header>
+        <!-- MAIN DA PÁGINA -->
+        <main>
+            <!-- ESCOLHA DE PRATOS/ COMIDA -->
+            <div class="principal box-food">
+                <h1>Primeiro, seu prato</h1>
+                <!-- PRATOS -->
+                <div class="plates">
+                    <!-- PRATO -->
+                    <div class="plate" onclick="selecionaPrato(this)">
+                        <img src="imagens/frango_yin_yang 1.png" alt="">
+                        <p>Frango com Frango</p>
+                        <p>Um pouco de frango e mais frango</p>
+                        <p>R$<span>15.90</span></p>
+                        <ion-icon class="checkoff" name="checkmark-circle"></ion-icon>
+                    </div>
+                    <!-- PRATO -->
+                    <div class="plate" onclick="selecionaPrato(this)">
+                        <img src="imagens/egg-g20c74d1f9_640.jpg" alt="">
+                        <p>Prato maromba</p>
+                        <p>20 ovos e arroz</p>
+                        <p>R$<span>13.00</span></p>
+                        <ion-icon class="checkoff" name="checkmark-circle"></ion-icon>
+                    </div>
+                    <!-- PRATO -->
+                    <div class="plate" onclick="selecionaPrato(this)">
+                        <img src="imagens/charcuterie-gc268549ad_640.jpg" alt="">
+                        <p>Carninha pô!</p>
+                        <p>Churrascão misto</p>
+                        <p>R$<span>20.90</span></p>
+                        <ion-icon class="checkoff" name="checkmark-circle"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <!-- ESCOLHA DE PRATOS/ BEBIDAS -->
+            <div class="bebida box-food">
+                <h1>Agora, sua bebida</h1>
+                <!-- PRATOS -->
+                <div class="plates">
+                    <!-- PRATO -->
+                    <div class="plate" onclick="selecionaPrato1(this)">
+                        <img src="imagens/water-g5e9c9e7ee_640.jpg" alt="">
+                        <p>Água</p>
+                        <p>H2O em forma líquida</p>
+                        <p>R$<span>2.50</span></p>
+                        <ion-icon class="checkoff" name="checkmark-circle"></ion-icon>
+                    </div>
+                    <!-- PRATO -->
+                    <div class="plate" onclick="selecionaPrato1(this)">
+                        <img src="imagens/coca-cola-g108320fc2_640.jpg" alt="">
+                        <p>Coquinha Gelada</p>
+                        <p>Só beba gelada</p>
+                        <p>R$<span>5.90</span></p>
+                        <ion-icon class="checkoff" name="checkmark-circle"></ion-icon>
+                    </div>
+                    <!-- PRATO -->
+                    <div class="plate" onclick="selecionaPrato1(this)">
+                        <img src="imagens/glass-of-papaya-juice-put-on-white-marble-floor.jpg" alt="">
+                        <p>Suco de Acerola</p>
+                        <p>Melhor suco já criado na história.</p>
+                        <p>R$<span>8.00</span></p>
+                        <ion-icon class="checkoff" name="checkmark-circle"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <!-- ESCOLHA DE PRATOS/ SOBREMESA -->
+            <div class="sobremesa box-food">
+                <h1>Por fim, sua sobremesa</h1>
+                <!-- PRATOS -->
+                <div class="plates">
+                    <!-- PRATO -->
+                    <div class="plate" onclick="selecionaPrato2(this)">
+                        <img src="imagens/pudim 1.png" alt="">
+                        <p>Pudim</p>
+                        <p>Melhor sobremesa do Brasil</p>
+                        <p>R$<span>10.00</span></p>
+                        <ion-icon class="checkoff" name="checkmark-circle"></ion-icon>
+                    </div>
+                    <!-- PRATO -->
+                    <div class="plate" onclick="selecionaPrato2(this)">
+                        <img src="imagens/brigadeiro-a-brazilian-sweet.jpg" alt="">
+                        <p>Brigadeiro</p>
+                        <p>Chocolate indescritível</p>
+                        <p>R$<span>8.00</span></p>
+                        <ion-icon class="checkoff" name="checkmark-circle"></ion-icon>
+                    </div>
+                    <!-- PRATO -->
+                    <div class="plate" onclick="selecionaPrato2(this)">
+                        <img src="imagens/homemade-coconut-balls-on-white-wooden-table.jpg" alt="">
+                        <p>Beijinho</p>
+                        <p>Rola?</p>
+                        <p>R$<span>5.00</span></p>
+                        <ion-icon class="checkoff" name="checkmark-circle"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- BOTÃO INFERIOR FIXO DESLIGADO -->
+        <footer class="butligado">
+            <div>
+                <p>Selecione os 3 itens <br> para fechar o pedido</p>
+            </div>
+        </footer>
+        <!-- BOTÃO INFERIOR FIXO LIGADO -->
+        <footer class="butdesligado">
+            <div class="aprovado" onclick="abreCard()">
+                <p>Fechar pedido</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    </body>
+</html>
